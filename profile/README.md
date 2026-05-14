@@ -18,7 +18,7 @@ Feedback or questions: **support@meringo.app**
 
 ### Where's the code?
 
-Meringo is closed-source. This org reserves the `meringo` namespace and hosts things that don't need to ship in the APK — eventually a public changelog, an issue tracker, and any isolated DSP modules that make sense as standalone FOSS. Right now there's nothing public to read.
+Meringo is closed-source. This org hosts things that don't need to ship in the APK — eventually a public changelog, an issue tracker, and any isolated DSP modules that make sense as standalone FOSS. Right now there's nothing public to read.
 
 ### What it actually does, briefly
 
