@@ -1,31 +1,23 @@
 # Meringo
 
-**A bit-perfect Jellyfin music client for Android DAPs.**
+**A bit-perfect music player for Android, for people who listen through a USB DAC.**
 
-Primary target: the FiiO M21. Runs on any Android 13+ device.
+By default, Android resamples your music to 48 kHz. Meringo takes your DAC off that path, and hands you the receipt: it hashes what it sent the DAC, so you can check the math yourself.
 
----
+- **Get it:** [Meringo on Google Play](https://play.google.com/store/apps/details?id=app.meringo). $9.99 once, with a 7-day full trial and no subscription.
+- **What it plays:** your own FLAC and ALAC files. It also streams from Jellyfin, and from Navidrome, Airsonic, Funkwhale, Gonic, Ampache and every other server that implements the OpenSubsonic API. Android 13 or later.
+- **The proof:** [the receipt registry](https://meringo.app/receipts/), with bit-identical receipts for the Fosi DS2, the Qudelix 5K and the Jcally JM6 Pro, and [the method, with a checker you can run yourself](https://meringo.app/verify/).
 
-### How to get a build
+### Questions it answers
 
-Closed testing, free in exchange for playback feedback.
+- [What Android app should I use with my USB DAC?](https://meringo.app/usb-dac-android-app/)
+- [Does Android resample my music?](https://meringo.app/does-android-resample/)
+- [Android 14 "USB lossless": what it actually means](https://meringo.app/android-14-usb-lossless/)
+- [Which USB DACs show the rate they receive?](https://meringo.app/usb-dacs-that-show-the-rate/)
 
-1. Join the [closed-testing Google Group](https://groups.google.com/g/meringo-android-closed-testing-group) with the Google account you'll test from.
-2. Wait a couple of minutes for Play Store to register your account.
-3. Install via the [Play Store closed-testing link](https://play.google.com/apps/testing/app.meringo).
+### Also from Meringo Labs
 
-Feedback or questions: **support@meringo.app**
+- **Meringo Listen**, an audiobook player and Audiobookshelf client for Android, in closed testing ahead of its public launch: [meringolisten.app](https://meringolisten.app)
+- **Meringo Minutes**, a meeting-notes app for the Mac. Not for sale yet: [meringominutes.app](https://meringominutes.app)
 
-### Where's the code?
-
-Meringo is closed-source. This org hosts things that don't need to ship in the APK — eventually a public changelog, an issue tracker, and any isolated DSP modules that make sense as standalone FOSS. Right now there's nothing public to read.
-
-### What it actually does, briefly
-
-Opens AAudio at the file's native sample rate and bit depth, rides AudioFlinger's MIXER thread as a passthrough under rate-parity + single-client + unity-gain, and flips a UI badge amber the moment any of those conditions breaks (notification chime, ReplayGain non-unity scalar, crossfade animating volume). No claim of AudioFlinger bypass — just an honest description of the conditions under which the passthrough holds.
-
-Parametric EQ in IEEE 754 binary64 end-to-end with TPDF dither at every integer-PCM output stage and a C¹-continuous cubic soft-clip gated on active processing. Cross-source dedup across Local + Jellyfin via a four-arm match chain ending in Chromaprint Hamming distance. Thermal-aware background workers tuned for the M21's Snapdragon 680.
-
-### About
-
-Solo project. No team. No funding. Built for people who care about what 24/192 actually sounds like and who want their Jellyfin library to feel like one library, not a streaming-vs-local schism.
+Meringo is closed source and a solo project. Questions, and receipts from your own DAC: support@meringo.app
