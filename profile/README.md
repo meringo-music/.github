@@ -17,7 +17,7 @@ By default, Android resamples your music to 48 kHz. Meringo takes your DAC off t
 
 ### Also from Meringo Labs
 
-- **Meringo Listen**, an audiobook player and Audiobookshelf client for Android, in closed testing ahead of its public launch: [meringolisten.app](https://meringolisten.app)
+- **Meringo Listen**, an audiobook player and Audiobookshelf client for Android: [Meringo Listen on Google Play](https://play.google.com/store/apps/details?id=app.meringo.listen). $14.99 once, with a 14-day full trial and no subscription. [meringolisten.app](https://meringolisten.app)
 - **Meringo Minutes**, a meeting-notes app for the Mac. Not for sale yet: [meringominutes.app](https://meringominutes.app)
 
 Meringo is closed source and a solo project. Questions, and receipts from your own DAC: support@meringo.app
